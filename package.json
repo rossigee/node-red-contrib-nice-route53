@@ -9,7 +9,8 @@
     "keywords": [ "node-red" ],
     "node-red"     : {
         "nodes": {
-            "nice-route53": "nice-route53.js"
+            "nice-route53": "nice-route53.js",
+            "nice-route53-config": "nice-route53-config.js"
         }
     }
 }
