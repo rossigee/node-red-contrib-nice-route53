@@ -5,7 +5,7 @@ module.exports = function(RED) {
     function NiceRoute53Node(config) {
         RED.nodes.createNode(this,config);
         var node = this;
-        var credentials = RED.nodes.getNode(config.credx);
+        var credentials = RED.nodes.getNode(config.creds);
         if(!credentials) {
             node.error("No AWS credentials configured.", config);
         }
@@ -30,7 +30,7 @@ module.exports = function(RED) {
             // the arguments to the method.
             var args = msg.payload;
             if(config.method == "zones") {
-              r53.zones(args, defaultHandler);
+              r53.zones(defaultHandler);
             }
             else if(config.method == "createZone") {
               r53.createZone(args, defaultHandler);
