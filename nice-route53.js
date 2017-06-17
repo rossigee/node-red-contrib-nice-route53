@@ -5,14 +5,10 @@ module.exports = function(RED) {
     function NiceRoute53Node(config) {
         RED.nodes.createNode(this,config);
         var node = this;
-        var credentials = RED.nodes.getNode(config.creds);
+        var credentials = RED.nodes.getNode(config.credx);
         if(!credentials) {
             node.error("No AWS credentials configured.", config);
         }
-
-        console.log("Z", config);
-        console.log("X", credentials);
-        console.log("Y", config.credentials);
 
         node.on('input', function (msg) {
             var r53 = new Route53({
