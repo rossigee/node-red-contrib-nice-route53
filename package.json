@@ -1,6 +1,6 @@
 {
     "name"         : "node-red-contrib-nice-route53",
-    "version"      : "0.0.2",
+    "version"      : "0.0.3",
     "description"  : "Nodes for updating AWS Route53 DNS entries. Wraps 'nice-route53' module.",
     "author"       : "Ross Golder <ross@golder.org>",
     "dependencies": {
